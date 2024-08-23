@@ -6,12 +6,17 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background-color: white;
   border-bottom: 2px solid #ddd;
+  z-index: 1000; /* Para asegurar que el header esté sobre otros elementos */
 }
 
 .logo {
@@ -24,13 +29,23 @@ header {
   margin-right: 10px;
 }
 
+.logo h1 {
+  color: #A020F0;
+  margin: 0;
+}
+
+.logo h1 span {
+  color: #FF8000;
+}
+
 .menu-container {
   display: flex;
+  flex-grow: 1;
   justify-content: center;
 }
 
 .menu-item {
-  margin: 0 5px;
+  margin: 0 10px;
   padding: 10px 20px;
   background-color: #FFC800;
   color: #000;
@@ -60,4 +75,8 @@ header {
 
 .search-bar button {
   display: none; /* Si deseas un botón de búsqueda, puedes agregarlo */
+}
+
+body {
+  padding-top: 70px; /* Ajuste para evitar que el contenido se superponga con el header */
 }
